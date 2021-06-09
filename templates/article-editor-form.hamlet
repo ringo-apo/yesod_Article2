@@ -1,0 +1,11 @@
+#{extra}
+<table>
+    <tr>
+        <th>#{fvLabel titleView}
+        <td>^{fvInput titleView}
+    <tr>
+        <th>#{fvLabel publishedView}
+        <td>^{fvInput publishedView}
+    <tr>
+        <th>#{fvLabel viewCountView}
+        <td>^{fvInput viewCountView}

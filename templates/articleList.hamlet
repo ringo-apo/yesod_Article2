@@ -1,0 +1,23 @@
+<h1>Article一覧画面
+<a href="@{ArticleR}">新規登録
+<table border="1px">
+  <tr>
+    <th>タイトル
+    <th>公開日
+    <th>ビュー数
+    <th>
+  $forall Entity articleId article <- articles
+    <tr>
+      <td>
+        #{articleTitle article}
+      <td>
+        #{show $ articlePublished article}
+      <td>
+        $maybe count <- articleViewCount article
+          #{count}
+      <td>
+          <a href="@{ArticleUpdateR articleId}">編集
+          <a href="#" onclick="if(confirm('削除します。')){articleDeleteForm.articleId.value='#{toPathPiece articleId}';articleDeleteForm.submit();}">削除
+
+<form name="articleDeleteForm" method=post action=@{ArticleDeleteR}>
+  <input type=hidden name=articleId>
