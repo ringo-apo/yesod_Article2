@@ -48,4 +48,4 @@ stack build
 stack exec -- yesod devel
 ```
 
-[localhost:3000](localhost:3000)  
+[localhost:3000/ArticleList](localhost:3000/ArticleList)  
